@@ -20,4 +20,24 @@ public class Individual extends TaxPayer {
         this.healthSpending = healthSpending;
     }
 
+    @Override
+    public Double taxCalc() {
+        double taxPaid = 0.0;
+        if (annualIncome < 20000.00) {
+            taxPaid = 15 * annualIncome / 100;
+            if (healthSpending != 0.0) {
+                double healthDiscount = 50 * taxPaid / 100;
+                taxPaid -= healthDiscount;
+            }
+        }
+        else {
+            taxPaid = 25 * annualIncome / 100;
+            if (healthSpending != 0.0) {
+                double healthDiscount = 50 * taxPaid / 100;
+                taxPaid -= healthDiscount;
+            }
+        }
+        return taxPaid;
+    }
+
 }
