@@ -1,5 +1,6 @@
 package application;
 
+import entities.Company;
 import entities.Individual;
 import entities.TaxPayer;
 
@@ -33,6 +34,19 @@ public class Program {
                 double healthSpending = sc.nextDouble();
 
                 TaxPayer taxPayer = new Individual(name, annualIncome, healthSpending);
+                taxPayers.add(taxPayer);
+            }
+            else if (resp == 'c') {
+                System.out.print("Company name: ");
+                String name = sc.nextLine();
+
+                System.out.print("Annual income: ");
+                double annualIncome = sc.nextDouble();
+
+                System.out.print("Number of employees: ");
+                int employeesNumber = sc.nextInt();
+
+                TaxPayer taxPayer = new Company(name, annualIncome, employeesNumber);
                 taxPayers.add(taxPayer);
             }
         }
