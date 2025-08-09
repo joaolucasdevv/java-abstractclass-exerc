@@ -51,7 +51,14 @@ public class Program {
             }
         }
 
-
+        System.out.println("TAXES PAID");
+        double sum = 0.0;
+        for (TaxPayer taxpaid : taxPayers) {
+            System.out.printf("%s: $ %.2f%n", taxpaid.getName(), taxpaid.taxCalc());
+            sum += taxpaid.taxCalc();
+        }
+        System.out.println();
+        System.out.printf("TOTAL TAXES: $ %.2f%n", sum);
 
         sc.close();
     }
