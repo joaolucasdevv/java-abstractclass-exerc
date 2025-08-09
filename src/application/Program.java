@@ -24,6 +24,7 @@ public class Program {
             System.out.print("Individual or company (i/c)? ");
             char resp = sc.next().charAt(0);
             if (resp == 'i') {
+                sc.nextLine();
                 System.out.print("Name: ");
                 String name = sc.nextLine();
 
@@ -37,6 +38,7 @@ public class Program {
                 taxPayers.add(taxPayer);
             }
             else if (resp == 'c') {
+                sc.nextLine();
                 System.out.print("Company name: ");
                 String name = sc.nextLine();
 
