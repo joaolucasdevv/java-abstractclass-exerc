@@ -12,4 +12,12 @@ public class Company extends TaxPayer {
         this.employeesNumber = employeesNumber;
     }
 
+    public Integer getEmployeesNumber() {
+        return employeesNumber;
+    }
+
+    public void setEmployeesNumber(Integer employeesNumber) {
+        this.employeesNumber = employeesNumber;
+    }
+
 }
