@@ -13,6 +13,20 @@ public class TaxPayer {
         this.annualIncome = annualIncome;
     }
 
+    public String getName() {
+        return name;
+    }
 
+    public Double getAnnualIncome() {
+        return annualIncome;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setAnnualIncome(Double annualIncome) {
+        this.annualIncome = annualIncome;
+    }
 
 }
