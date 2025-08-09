@@ -26,14 +26,14 @@ public class Individual extends TaxPayer {
         if (annualIncome < 20000.00) {
             taxPaid = 15 * annualIncome / 100;
             if (healthSpending != 0.0) {
-                double healthDiscount = 50 * taxPaid / 100;
+                double healthDiscount = 50 * healthSpending / 100;
                 taxPaid -= healthDiscount;
             }
         }
         else {
             taxPaid = 25 * annualIncome / 100;
             if (healthSpending != 0.0) {
-                double healthDiscount = 50 * taxPaid / 100;
+                double healthDiscount = 50 * healthSpending / 100;
                 taxPaid -= healthDiscount;
             }
         }
